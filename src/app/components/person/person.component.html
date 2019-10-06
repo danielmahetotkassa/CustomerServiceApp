@@ -1,0 +1,68 @@
+
+Search <input type = "text" placeholder="Search Employee" ng-model = "searchPerson" />
+<br>
+<br>
+<br>
+
+
+    
+        <ul>
+          <li ng-repeat="persons in person" >
+            
+                  {{ persons.id }}  
+                  
+                
+          </li>
+       
+         
+      </ul>
+    
+<table class="table">
+<thead class="thead-dark">
+  <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+  </tr>
+</thead>
+<tbody>
+
+    <ul *ngFor="let persons of person ">
+    <tr>
+      <td> {{ persons.id }}  </td>  
+      <td> {{ persons.first_name }}  </td> 
+      <td> {{ persons.last_name }}   </td> 
+    </tr>
+     
+  </ul>
+
+</tbody>
+</table>
+
+<br><br>
+<table class="table">
+<thead class="thead-dark">
+  <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor = "let persons of person ">
+      <td *ngFor = "let key of persons | keys " > 
+          {{persons[key]}}
+      </td>
+  </tr>
+</tbody>
+
+</table>
+
+
+
+
+
+     
+
+        
+  
